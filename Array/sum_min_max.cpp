@@ -10,19 +10,22 @@ class Solution
 public:
     int findSum(int A[], int N)
     {
-        int min = INT_MAX;
-        int max = INT_MIN;
+        int mini = INT_MAX;
+        int maxi = INT_MIN;
         for (int i = 0; i < N; i++)
         {
-            if (A[i] < min)
-                min = A[i];
+            mini = min(mini , A[i]);
+            // if (A[i] < min)
+            //     min = A[i];
         }
         for (int i = 0; i < N; i++)
         {
-            if (A[i] > max)
-                max = A[i];
+            maxi = max(maxi , A[i]);
+
+            // if (A[i] > max)
+            //     max = A[i];
         }
-        return (max + min);
+        return (maxi + mini);
     }
 };
 
