@@ -4,7 +4,6 @@ using namespace std;
 
 void adjacentSwap(vector<int> arr, int m)
 {
-    // int a = m + 1, b = arr.size() - 1;
 
     for (int i = 0; i < m; i += 2)
     {
