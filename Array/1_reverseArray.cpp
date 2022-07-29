@@ -17,21 +17,21 @@ void adjacentSwap(vector<int> arr, int m)
         cout << arr[i] << " ";
     }
 }
-// void reverse(vector<int> arr, int m)
-// {
-//     int a = m + 1, b = arr.size() - 1;
+void reverse(vector<int> arr, int m)
+{
+    int a = m + 1, b = arr.size() - 1;
 
-//     while (a <= b)
-//     {
-//         swap(arr[a], arr[b]);
-//         a++;
-//         b--;
-//     }
-//     for (int i = 0; i < arr.size(); i++)
-//     {
-//         cout << arr[i] << " ";
-//     }
-// }
+    while (a <= b)
+    {
+        swap(arr[a], arr[b]);
+        a++;
+        b--;
+    }
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 
 int main()
 {
@@ -41,12 +41,15 @@ int main()
     arr.push_back(1);
     arr.push_back(5);
     arr.push_back(6);
+    arr.push_back(9);
 
     int m;
     cout << "Enter the index : ";
     cin >> m;
-    // reverse(arr, m);
+    reverse(arr, m);
+    cout<<endl;
     adjacentSwap(arr, m);
+    cout<<endl;
 
     return 0;
 }
